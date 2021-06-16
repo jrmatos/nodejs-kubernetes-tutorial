@@ -1,4 +1,5 @@
 HOST=localhost:3000
+HOST=http://192.168.99.100:30838
 
 echo '\n\n creating Chapolin'
 CREATE=$(
