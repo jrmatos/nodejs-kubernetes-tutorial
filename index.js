@@ -58,6 +58,13 @@ const failAction = async (request, h, err) => {
   server.route([
     {
       method: "GET",
+      path: "/new",
+      handler: () => {
+        return "now its ok!";
+      }
+    },
+    {
+      method: "GET",
       path: "/heroes",
       handler: () => {
         return Hero.findAll();

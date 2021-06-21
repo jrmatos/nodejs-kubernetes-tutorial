@@ -62,3 +62,21 @@ kubectl delete -f . # deleta tudo de uma vez
 kubectl create -f . # cria tudo de uma vez
 
 minikube delete # deleta todos os recursos
+
+kubectl expose <pod> --port=444 --name=frontend
+kubectl port-forward <pod> 8080
+kubectl exec <pod> -- command
+kubectl label pods <pod> mylabel=awesome
+
+kubectl rollout status deployment/api-heroes
+
+kubectl rollout status deployment/api-heroes
+kubectl get pods
+kubectl set image deployment/api-heroes api-heroes=paulomatosj/nodejs-with-postgres-api-example:2
+kubectl get pods
+kubectl rollout history deployment/api-heroes
+kubectl rollout undo deployment/heroes
+kubectl rollout undo deployment/api-heroes
+kubectl rollout history deployment/api-heroes
+kubectl rollout undo deployment/api-heroes --to-revision=4
+kubectl rollout history deployment/api-heroes
